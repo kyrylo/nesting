@@ -45,7 +45,7 @@ module Nesting
     private
 
     def nonmodule?(mod)
-      !((mod.class == Module) ^ (mod.class == Class))
+      !(Module === mod)
     end
   end
 end
